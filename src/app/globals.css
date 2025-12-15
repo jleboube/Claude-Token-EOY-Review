@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 26, 26, 26;
+  --background-start-rgb: 250, 248, 245;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom gradient text - Claude */
+.gradient-text {
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Token counter animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-count-up {
+  animation: countUp 0.8s ease-out forwards;
+}
+
+/* X button styles */
+.btn-x {
+  background: #000000;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-x:hover {
+  background: #1a1a1a;
+  transform: scale(1.02);
+}
+
+/* Claude button styles */
+.btn-claude {
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-claude:hover {
+  background: linear-gradient(135deg, #B45309 0%, #D97706 100%);
+  transform: scale(1.02);
+}
+
+/* Provider-agnostic primary button (uses CSS variable) */
+.btn-primary {
+  background: var(--primary-gradient, linear-gradient(135deg, #D97706 0%, #F59E0B 100%));
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.9);
+  transform: scale(1.02);
+}
+
+/* Share card for screenshot */
+.share-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 24px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.share-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #D97706, #F59E0B, #D97706);
+}
+
+/* Input styling */
+input[type="text"],
+input[type="password"] {
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #D97706;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+}

@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Next.js
+.next/
+out/
+
+# Production
+build/
+dist/
+
+# Misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+!.env.example
+.env.claude
+.env.openai
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+AGENTS.md
+CLAUDE.md
+TASKS.md
+*.PRD.md
+EOY-CC-PRD.md
+
+# Sensitive files
+X-Developers.pdf
+openai-notes.md
+ClaudeTokenShare - Share Your 2025 Claude Usage.pdf
+.env.claude
+.env.openai
