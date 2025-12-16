@@ -28,6 +28,13 @@ export function Footer() {
           <span>© Joe LeBoube 2025</span>
           <span className="hidden sm:inline">•</span>
           <Link
+            href="/leaderboard"
+            className={`hover:underline ${isClaude ? 'text-claude-orange' : 'text-openai-green'}`}
+          >
+            Leaderboard
+          </Link>
+          <span className="hidden sm:inline">•</span>
+          <Link
             href="/privacy"
             className={`hover:underline ${isClaude ? 'text-claude-orange' : 'text-openai-green'}`}
           >

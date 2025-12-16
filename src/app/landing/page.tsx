@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
   Sparkles, Code2, Rocket, Brain, Clock,
-  Star, ArrowRight,
+  Star, ArrowRight, Trophy,
   MessageSquare, GitBranch, Terminal, Cpu,
   ChevronDown, Github, Linkedin
 } from 'lucide-react'
@@ -88,6 +88,12 @@ const benefits = [
     title: "Learn While You Code",
     description: "Understand complex codebases faster with AI explanations and documentation.",
     gradient: "from-indigo-500 to-violet-500"
+  },
+  {
+    icon: <Trophy className="w-8 h-8" />,
+    title: "Join the Leaderboard",
+    description: "See how your Claude usage compares to other power users. Compete and showcase your AI journey.",
+    gradient: "from-amber-500 to-orange-500"
   },
 ]
 
@@ -185,6 +191,7 @@ function Navbar({ onGetStarted }: NavbarProps) {
   const navLinks = [
     { name: 'Benefits', href: '#benefits' },
     { name: 'How it Works', href: '#how-it-works' },
+    { name: 'Leaderboard', href: '/leaderboard' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'FAQ', href: '#faq' },
   ]
