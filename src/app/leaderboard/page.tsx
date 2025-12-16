@@ -87,8 +87,8 @@ export default function LeaderboardPage() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
           <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-purple-100 rounded-lg">
-                <Users className="w-5 h-5 text-purple-600" />
+              <div className="p-2 bg-blue-100 rounded-lg">
+                <Users className="w-5 h-5 text-blue-600" />
               </div>
               <div>
                 <p className="text-2xl font-bold text-gray-900">{total}</p>
@@ -157,14 +157,14 @@ export default function LeaderboardPage() {
         />
 
         {/* CTA */}
-        <div className="mt-8 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-6 text-center text-white">
+        <div className="mt-8 bg-gradient-to-r from-claude-orange to-amber-500 rounded-xl p-6 text-center text-white">
           <h2 className="text-xl font-bold mb-2">Want to join the leaderboard?</h2>
-          <p className="text-purple-100 mb-4">
+          <p className="text-amber-100 mb-4">
             Check your Claude usage and opt-in to appear on this leaderboard.
           </p>
           <a
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-purple-600 rounded-lg font-medium hover:bg-purple-50 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-claude-orange rounded-lg font-medium hover:bg-amber-50 transition-colors"
           >
             <Trophy className="w-5 h-5" />
             Check My Usage

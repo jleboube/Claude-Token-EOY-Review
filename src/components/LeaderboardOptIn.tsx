@@ -93,10 +93,10 @@ export function LeaderboardOptIn({ usageData, isXConnected, onOptInComplete }: L
   }
 
   return (
-    <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-200">
+    <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
       <div className="flex items-start gap-4">
-        <div className="p-3 bg-purple-100 rounded-lg">
-          <Trophy className="w-6 h-6 text-purple-600" />
+        <div className="p-3 bg-amber-100 rounded-lg">
+          <Trophy className="w-6 h-6 text-amber-600" />
         </div>
         <div className="flex-1">
           <h3 className="font-semibold text-gray-900 mb-1">Join the Leaderboard</h3>
