@@ -7,6 +7,7 @@ import { UsageDashboard } from '@/components/UsageDashboard'
 import { PostPreview } from '@/components/PostPreview'
 import { SuccessScreen } from '@/components/SuccessScreen'
 import { LoadingSpinner } from '@/components/LoadingSpinner'
+import { LeaderboardOptIn } from '@/components/LeaderboardOptIn'
 import { CONFIG } from '@/lib/provider-config'
 import type { UsageData, XCredentials, ClaudeCredentials } from '@/types'
 
@@ -188,11 +189,19 @@ export function HomeContent() {
       )}
 
       {step === 'dashboard' && usageData && (
-        <UsageDashboard
-          usageData={usageData}
-          onProceed={handleProceedToPreview}
-          onBack={handleBack}
-        />
+        <>
+          <UsageDashboard
+            usageData={usageData}
+            onProceed={handleProceedToPreview}
+            onBack={handleBack}
+          />
+          <div className="mt-6">
+            <LeaderboardOptIn
+              usageData={usageData}
+              isXConnected={xConnected}
+            />
+          </div>
+        </>
       )}
 
       {step === 'preview' && usageData && (

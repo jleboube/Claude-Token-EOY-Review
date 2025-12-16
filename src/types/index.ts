@@ -66,3 +66,37 @@ export interface ApiResponse<T> {
   data?: T
   error?: string
 }
+
+// Leaderboard types
+export interface LeaderboardUser {
+  id: number
+  xUsername: string
+  xUserId?: string
+  displayName?: string
+  optedInAt: string
+}
+
+export interface LeaderboardEntry {
+  id: number
+  userId: number
+  year: number
+  month?: number
+  totalTokens: number
+  totalInputTokens: number
+  totalOutputTokens: number
+  totalCost: number
+  submittedAt: string
+  // Joined fields
+  xUsername: string
+  displayName?: string
+  rank?: number
+}
+
+export interface LeaderboardResponse {
+  entries: LeaderboardEntry[]
+  total: number
+  page: number
+  pageSize: number
+}
+
+export type LeaderboardView = '2025' | 'all-time' | 'monthly'
